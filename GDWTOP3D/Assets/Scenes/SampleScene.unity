@@ -247,9 +247,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433683949}
   serializedVersion: 2
-  m_Mass: 1.3
-  m_Drag: 2
-  m_AngularDrag: 2
+  m_Mass: 1
+  m_Drag: 0.7
+  m_AngularDrag: 0.7
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -287,7 +287,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f62f6b40b4bf324f869f5d176a71d68, type: 2}
+  - {fileID: 2100000, guid: 17fa41fb864eed940a23e5e03c35f140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -325,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433683949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.41, y: 2.09, z: -12.69}
+  m_LocalPosition: {x: 10.16, y: 2.09, z: -18.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1639261084}
@@ -344,7 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a83a0abfe478454f92dc243d9fc1b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  rb: {fileID: 433683950}
+  speed: 30
   cam: {fileID: 963194227}
 --- !u!1 &705507993
 GameObject:
@@ -451,6 +452,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -536,6 +538,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pla: {fileID: 433683955}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f2b7320cf8ffe47bc5894850b5940e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectMaterial: {fileID: 2100000, guid: 7126e972b24bdb24da1a6a95c534548f, type: 2}
 --- !u!1 &1569881337
 GameObject:
   m_ObjectHideFlags: 0

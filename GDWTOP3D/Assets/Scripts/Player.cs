@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     public float speed=5;
     public Camera cam;
     Ray ray;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         StartCoroutine(timers());
     }
 
@@ -38,7 +38,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector3.forward*speed,ForceMode.Force);            
+            Debug.Log("do");
+            rb.AddForce(Vector3.forward*speed,ForceMode.Force);
+            Debug.Log("did");
         }
         if (Input.GetKey(KeyCode.S))
         {
